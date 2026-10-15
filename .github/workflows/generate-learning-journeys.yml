@@ -1,0 +1,35 @@
+name: Generate 2640 Learning Journey Folders
+on:
+  push:
+    branches: [successlabs-2640-learning-journeys]
+    paths:
+      - 'scripts/generate_learning_journeys.py'
+      - '.github/workflows/generate-learning-journeys.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate 2640 folders
+        run: python scripts/generate_learning_journeys.py
+      - name: Validate
+        run: |
+          test "$(find learning-journeys -name README.md | wc -l)" -eq 2641
+          test "$(find learning-journeys -name README.md | grep -v '^learning-journeys/README.md$' | wc -l)" -eq 2640
+      - name: Commit generated folders
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add learning-journeys
+          if ! git diff --cached --quiet; then
+            git commit -m "feat: publish 2640 architecture learning journey folders"
+            git push
+          fi
