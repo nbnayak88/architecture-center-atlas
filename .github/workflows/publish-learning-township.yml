@@ -1,4 +1,4 @@
-name: Publish Learning Township 31680
+name: Publish Learning Township — Free Origin and Premium
 on:
   workflow_dispatch:
   push:
@@ -23,18 +23,21 @@ jobs:
           rm -rf -- 'Learning Township'
       - name: Generate from authoritative HUB export
         run: python scripts/generate_learning_township.py
-      - name: Verify exactly 31680 pathways
+      - name: Verify all generated pathway documents
         run: |
-          test "$(find 'Learning Township' -name README.md | wc -l)" -eq 37898
-      - name: Verify 5280 LIT planning records
+          test "$(find 'Learning Township' -name README.md | wc -l)" -eq 45290
+      - name: Verify 6336 LIT planning records
         run: |
-          test "$(($(wc -l < 'Learning Township/07-LIT-Leadership-and-Identity-Transformation-Capability-Academy-Source-Sunday/lit-planned-pathways.csv') - 1))" -eq 5280
+          test "$(($(wc -l < 'Learning Township/07-LIT-Leadership-and-Identity-Transformation-Capability-Academy-Source-Sunday/lit-planned-pathways.csv') - 1))" -eq 6336
+      - name: Verify 6336 free HUB Origin pathways
+        run: |
+          test "$(($(wc -l < 'Learning Township/hub-origin-free-pathways.csv') - 1))" -eq 6336
       - name: Commit generated Township
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add 'Learning Township'
           if ! git diff --cached --quiet; then
-            git commit -m "feat: publish 31680 HUB Learning Township pathways"
+            git commit -m "feat: publish free Origin and premium Learning Township pathways"
             git push
           fi
