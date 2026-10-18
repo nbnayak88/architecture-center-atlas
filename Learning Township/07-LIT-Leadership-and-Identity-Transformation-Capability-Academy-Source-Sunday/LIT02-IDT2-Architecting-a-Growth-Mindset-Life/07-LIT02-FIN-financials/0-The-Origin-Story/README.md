@@ -1,0 +1,1 @@
+# The Origin Story — Architecting a Growth Mindset Life\n\n**Sector:** Financials  \n**Level:** 0 — The Origin Story  \n**Status:** Planned, not counted among 5,280 pathways.\n\nExplore the origins of identity, values, leadership and purpose in this sector.\n
