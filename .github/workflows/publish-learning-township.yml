@@ -17,6 +17,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Remove old generated township tree
+        run: |
+          git rm -r -q --ignore-unmatch -- 'Learning Township'
+          rm -rf -- 'Learning Township'
       - name: Generate from authoritative HUB export
         run: python scripts/generate_learning_township.py
       - name: Verify exactly 31680 pathways
