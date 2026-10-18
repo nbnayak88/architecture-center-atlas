@@ -2,7 +2,7 @@
 
 **31,680 HUB catalog pathways** = 792 learning units × 5 curriculum tiers × 8 learning formats.
 
-Explore **6 academies → 12 series → 11 GICS sectors → 5 curriculum tiers → 8 learning formats**.
+Explore **6 academies → 12 series → 11 GICS sectors → 6 curriculum tiers (0–5); formats available for Levels 1–5**.
 
 This township is separate from the **2,640 vendor-neutral Architecture Learning Journeys** under `learning-journeys/`.
 
