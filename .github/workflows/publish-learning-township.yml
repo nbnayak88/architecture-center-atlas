@@ -2,7 +2,7 @@ name: Publish Learning Township 31680
 on:
   workflow_dispatch:
   push:
-    branches: [successlabs-learning-township-31680]
+    branches: [main]
     paths:
       - 'township-source/successlabs_township_31680_learning_pathways.csv'
       - 'scripts/generate_learning_township.py'
