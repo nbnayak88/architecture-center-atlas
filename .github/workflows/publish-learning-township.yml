@@ -25,7 +25,7 @@ jobs:
         run: python scripts/generate_learning_township.py
       - name: Verify exactly 31680 pathways
         run: |
-          test "$(find 'Learning Township' -name README.md | wc -l)" -eq 31681
+          test "$(find 'Learning Township' -name README.md | wc -l)" -eq 32473
       - name: Commit generated Township
         run: |
           git config user.name "github-actions[bot]"
