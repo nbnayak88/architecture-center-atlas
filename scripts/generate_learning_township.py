@@ -104,6 +104,21 @@ SERIES_FOLDER_NAMES["BTM10"] = "BTM10-AAN0-Architecting-Transformation-Intellige
 SERIES_FOLDER_NAMES["BTM11"] = "BTM11-AAI1-Architecting-AI-Powered-Enterprises"
 SERIES_FOLDER_NAMES["BTM12"] = "BTM12-AEC2-Architecting-Sustainable-Future-Ready-Enterprises"
 
+LIT_SERIES = {
+    "LIT01": ("IDT1", "Architecting My Purpose & Identity"),
+    "LIT02": ("IDT2", "Architecting a Growth Mindset Life"),
+    "LIT03": ("IDT3", "Architecting Emotional Freedom"),
+    "LIT04": ("IDT4", "Architecting Authentic Leadership"),
+    "LIT05": ("IDT5", "Architecting an Intentional Life"),
+    "LIT06": ("IDT6", "Architecting Continuous Learning"),
+    "LIT07": ("IDT7", "Architecting a Balanced Digital Life"),
+    "LIT08": ("IDT8", "Architecting Meaningful Relationships"),
+    "LIT09": ("IDT9", "Architecting Integrity & Values"),
+    "LIT10": ("IDT10", "Architecting a Fulfilling Life"),
+    "LIT11": ("IDT11", "Architecting Inner Transformation"),
+    "LIT12": ("IDT12", "Architecting a Better World"),
+}
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -172,7 +187,16 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
         (path/"README.md").write_text(text,encoding="utf-8")
     lit=ROOT/ACADEMY_FOLDERS["LIT"]
     lit.mkdir(parents=True,exist_ok=True)
-    (lit/"README.md").write_text("# LIT — Leadership and Identity Transformation Capability Academy\\n\\n**Source Sunday**\\n\\nStatus: New academy scaffold. The authoritative HUB CSV contains six academies; no LIT series, pathways, or courses have been invented.\\n\\nFocus: leadership identity, values, purpose, self-awareness, systems thinking, responsible transformation and evidence-based personal growth.\\n",encoding="utf-8")
+    (lit/"README.md").write_text("# LIT — Leadership and Identity Transformation Capability Academy\\n\\n**Source Sunday**\\n\\nTwelve canonical MDM/Wisdom program folders. The 5,280 LIT pathway expansion remains on hold.\\n", encoding="utf-8")
+    for mdm, (wisdom, title) in LIT_SERIES.items():
+        folder = lit / f"{mdm}-{wisdom}-{re.sub(r'[^A-Za-z0-9]+', '-', title).strip('-')}"
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder/"README.md").write_text(
+            f"# {title}\\n\\n**MDM Code:** {mdm}  \\n**Wisdom Code:** {wisdom}  \\n"
+            "**Academy:** LIT — Source Sunday  \\n**Status:** MDM scaffold only; 5,280-pathway expansion on hold.\\n\\n"
+            "Five life areas: spiritual, social, academic, professional, personal. "
+            "Future curriculum emphasizes activities, simulations, reflection, and evidence. "
+            "No sector pathways or LMS identifiers have been created.\\n", encoding="utf-8")
     assert len(seen)==EXPECTED
     if len(origin_units)!=792: sys.exit("Expected 792 unique Origin Story units")
     for origin_path,(unit_id,unit_title) in origin_units.items():
