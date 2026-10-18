@@ -1,1 +1,1 @@
-# LIT — Leadership and Identity Transformation Capability Academy\n\n**Source Sunday**\n\nStatus: New academy scaffold. The authoritative HUB CSV contains six academies; no LIT series, pathways, or courses have been invented.\n\nFocus: leadership identity, values, purpose, self-awareness, systems thinking, responsible transformation and evidence-based personal growth.\n
+# LIT — Leadership and Identity Transformation Capability Academy\n\n**Source Sunday**\n\nTwelve canonical MDM/Wisdom program folders. The 5,280 LIT pathway expansion remains on hold.\n
