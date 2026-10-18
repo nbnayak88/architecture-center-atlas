@@ -1,0 +1,37 @@
+name: Publish Learning Township 31680
+on:
+  workflow_dispatch:
+  push:
+    branches: [successlabs-learning-township-31680]
+    paths:
+      - 'township-source/successlabs_township_31680_learning_pathways.csv'
+      - 'scripts/generate_learning_township.py'
+      - '.github/workflows/publish-learning-township.yml'
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove old generated township tree
+        run: |
+          git rm -r -q --ignore-unmatch -- 'Learning Township'
+          rm -rf -- 'Learning Township'
+      - name: Generate from authoritative HUB export
+        run: python scripts/generate_learning_township.py
+      - name: Verify exactly 31680 pathways
+        run: |
+          test "$(find 'Learning Township' -name README.md | wc -l)" -eq 32474
+      - name: Commit generated Township
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 'Learning Township'
+          if ! git diff --cached --quiet; then
+            git commit -m "feat: publish 31680 HUB Learning Township pathways"
+            git push
+          fi
