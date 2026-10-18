@@ -22,6 +22,21 @@ ACADEMY_FOLDERS = {
     "LIT": "07-LIT-Leadership-and-Identity-Transformation-Capability-Academy-Source-Sunday",
 }
 
+HR_SERIES_NAMES = {
+    "HR01": "HR01-AWF1-Architecting-Autonomous-Workforce-Foundations",
+    "HR02": "HR02-ATA2-Architecting-Autonomous-Talent-Acquisition",
+    "HR03": "HR03-APH3-Architecting-High-Performance-Organizations",
+    "HR04": "HR04-AGL4-Architecting-Growth-Leadership",
+    "HR05": "HR05-ARP5-Architecting-Rewards-Performance-Excellence",
+    "HR06": "HR06-ALM6-Architecting-Continuous-Learning-Mobility",
+    "HR07": "HR07-APE7-Architecting-Autonomous-Payroll-Enterprises",
+    "HR08": "HR08-AWT8-Architecting-Workforce-Time-Operations",
+    "HR09": "HR09-AWI9-Architecting-Workforce-Intelligence",
+    "HR10": "HR10-ADX0-Architecting-Digital-Employee-Experience",
+    "HR11": "HR11-AAI1-Architecting-AI-Powered-HR-Enterprises",
+    "HR12": "HR12-AIG2-Architecting-Connected-HR-Enterprises",
+}
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -55,7 +70,8 @@ def main():
         series=r["Series Code"]
         tier_number=int(r["Tier Level (1-5)"])
         if tier_number not in TIER_FOLDERS: sys.exit("Invalid tier number")
-        path=ROOT / ACADEMY_FOLDERS[r["Academy Code"]] / series / f'{SECTOR_ORDER[r["Sector Code"]]:02d}-{series}-{r["Sector Code"]}-{slug(r["Sector Name"])}' / TIER_FOLDERS[tier_number] / slug(r["Learning Format"])
+        series_folder=HR_SERIES_NAMES.get(series,series) if r["Academy Code"]=="HR" else series
+        path=ROOT / ACADEMY_FOLDERS[r["Academy Code"]] / series_folder / f'{SECTOR_ORDER[r["Sector Code"]]:02d}-{series}-{r["Sector Code"]}-{slug(r["Sector Name"])}' / TIER_FOLDERS[tier_number] / slug(r["Learning Format"])
         origin_dir=path.parent.parent/"0-The-Origin-Story"
         origin_units[str(origin_dir)]=(r["Unit ID"],r["Unit Title"])
         if path in seen: sys.exit(f"Duplicate target folder: {path}")
