@@ -1,1 +1,1 @@
-# The Origin Story — Architecting a Growth Mindset Life\n\n**Sector:** Materials  \n**Level:** 0 — The Origin Story  \n**Status:** Planned, not counted among 5,280 pathways.\n\nExplore the origins of identity, values, leadership and purpose in this sector.\n
+# The Origin Story — Architecting a Growth Mindset Life\n\n**Sector:** Materials  \n**Level:** 0 — The Origin Story  \n**Access:** Free — Community/Citizen Edition.  \n**Status:** Planned, included in 6,336 LIT pathways.\n\nExplore the origins of identity, values, leadership and purpose in this sector.\n
