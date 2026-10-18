@@ -8,6 +8,7 @@ SOURCE = Path("township-source/successlabs_township_31680_learning_pathways.csv"
 ROOT = Path("Learning Township")
 FIELDS = ["Pathway ID","Index #","Unit ID","Unit Title","Sector Code","Sector Name","Academy Code","Academy Name","Series Code","Curriculum Tier","Tier Level (1-5)","Learning Format","Objective","Duration","Student Output","Unit Occupancy Status","Allocated Member"]
 EXPECTED = 31680
+SECTOR_ORDER = {'ENE':1,'MAT':2,'IND':3,'CD':4,'CS':5,'HC':6,'FIN':7,'IT':8,'COM':9,'UT':10,'RE':11}
 
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
@@ -35,10 +36,11 @@ def main():
     if len(tiers)!=5 or len(formats)!=8: sys.exit("Expected 5 tiers and 8 formats")
     sectors=sorted({r["Sector Code"] for r in records})
     if len(sectors)!=11: sys.exit("Expected 11 sectors")
+    if set(sectors) != set(SECTOR_ORDER): sys.exit('Unexpected GICS sector codes')
     seen=set()
     for r in records:
         series=r["Series Code"]
-        path=ROOT / f'{r["Academy Code"]}-{slug(r["Academy Name"])}' / series / f'{r["Sector Code"]}-{slug(r["Sector Name"])}' / f'{r["Curriculum Tier"]}-{r["Tier Level (1-5)"]}' / slug(r["Learning Format"])
+        path=ROOT / f'{r["Academy Code"]}-{slug(r["Academy Name"])}' / series / f'{SECTOR_ORDER[r["Sector Code"]]:02d}-{series}-{r["Sector Code"]}-{slug(r["Sector Name"])}' / f'{r["Curriculum Tier"]}-{r["Tier Level (1-5)"]}' / slug(r["Learning Format"])
         if path in seen: sys.exit(f"Duplicate target folder: {path}")
         seen.add(path)
         path.mkdir(parents=True,exist_ok=True)
