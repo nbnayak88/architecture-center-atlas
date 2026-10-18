@@ -37,6 +37,73 @@ HR_SERIES_NAMES = {
     "HR12": "HR12-AIG2-Architecting-Connected-HR-Enterprises",
 }
 
+SERIES_FOLDER_NAMES = dict(HR_SERIES_NAMES)
+# CRM — canonical MDM code + Wisdom code + BootCamp title
+SERIES_FOLDER_NAMES["CRM01"] = "CRM01-ACM1-Architecting-Connected-Customer-Enterprises"
+SERIES_FOLDER_NAMES["CRM02"] = "CRM02-AMK2-Architecting-Autonomous-Customer-Engagement"
+SERIES_FOLDER_NAMES["CRM03"] = "CRM03-ASL3-Architecting-Intelligent-Revenue-Organizations"
+SERIES_FOLDER_NAMES["CRM04"] = "CRM04-ACO4-Architecting-Digital-Commerce-Enterprises"
+SERIES_FOLDER_NAMES["CRM05"] = "CRM05-ACS5-Architecting-Autonomous-Customer-Service"
+SERIES_FOLDER_NAMES["CRM06"] = "CRM06-ACX6-Architecting-Exceptional-Customer-Experiences"
+SERIES_FOLDER_NAMES["CRM07"] = "CRM07-APR7-Architecting-Recurring-Revenue-Enterprises"
+SERIES_FOLDER_NAMES["CRM08"] = "CRM08-AOF8-Architecting-Autonomous-Customer-Operations"
+SERIES_FOLDER_NAMES["CRM09"] = "CRM09-ADI9-Architecting-Customer-Intelligence"
+SERIES_FOLDER_NAMES["CRM10"] = "CRM10-AEX0-Architecting-Digital-Customer-Experiences"
+SERIES_FOLDER_NAMES["CRM11"] = "CRM11-AAI1-Architecting-AI-Powered-Customer-Enterprises"
+SERIES_FOLDER_NAMES["CRM12"] = "CRM12-AIG2-Architecting-Connected-Customer-Ecosystems"
+# FI — canonical MDM code + Wisdom code + BootCamp title
+SERIES_FOLDER_NAMES["FI01"] = "FI01-AFR1-Architecting-Autonomous-Financial-Close"
+SERIES_FOLDER_NAMES["FI02"] = "FI02-APT2-Architecting-Autonomous-Payables"
+SERIES_FOLDER_NAMES["FI03"] = "FI03-AOT3-Architecting-Intelligent-Revenue-Operations"
+SERIES_FOLDER_NAMES["FI04"] = "FI04-ATX4-Architecting-Digital-Tax-Enterprises"
+SERIES_FOLDER_NAMES["FI05"] = "FI05-ATR5-Architecting-Autonomous-Treasury-Operations"
+SERIES_FOLDER_NAMES["FI06"] = "FI06-AFP6-Architecting-Enterprise-Financial-Planning"
+SERIES_FOLDER_NAMES["FI07"] = "FI07-ACC7-Architecting-Cost-Profitability-Excellence"
+SERIES_FOLDER_NAMES["FI08"] = "FI08-AFA8-Architecting-Enterprise-Asset-Accounting"
+SERIES_FOLDER_NAMES["FI09"] = "FI09-AGR9-Architecting-Financial-Governance-Risk"
+SERIES_FOLDER_NAMES["FI10"] = "FI10-AFI0-Architecting-Financial-Intelligence"
+SERIES_FOLDER_NAMES["FI11"] = "FI11-AAI1-Architecting-AI-Powered-Finance-Enterprises"
+SERIES_FOLDER_NAMES["FI12"] = "FI12-AIG2-Architecting-Connected-Financial-Enterprises"
+# PROC — canonical MDM code + Wisdom code + BootCamp title
+SERIES_FOLDER_NAMES["PROC01"] = "PROC01-APR1-Architecting-Autonomous-Procurement-Strategy"
+SERIES_FOLDER_NAMES["PROC02"] = "PROC02-ASR2-Architecting-Intelligent-Supplier-Sourcing"
+SERIES_FOLDER_NAMES["PROC03"] = "PROC03-ASN3-Architecting-Contract-Excellence"
+SERIES_FOLDER_NAMES["PROC04"] = "PROC04-ASU4-Architecting-Supplier-Relationship-Excellence"
+SERIES_FOLDER_NAMES["PROC05"] = "PROC05-APO5-Architecting-Autonomous-Procure-to-Pay"
+SERIES_FOLDER_NAMES["PROC06"] = "PROC06-ARI6-Architecting-Resilient-Supply-Operations"
+SERIES_FOLDER_NAMES["PROC07"] = "PROC07-AQC7-Architecting-Supplier-Quality-Performance-Excellence"
+SERIES_FOLDER_NAMES["PROC08"] = "PROC08-ASP8-Architecting-Spend-Optimization-Excellence"
+SERIES_FOLDER_NAMES["PROC09"] = "PROC09-ARG9-Architecting-Risk-Sustainable-Procurement"
+SERIES_FOLDER_NAMES["PROC10"] = "PROC10-AAN0-Architecting-Procurement-Intelligence"
+SERIES_FOLDER_NAMES["PROC11"] = "PROC11-AAI1-Architecting-AI-Powered-Procurement-Enterprises"
+SERIES_FOLDER_NAMES["PROC12"] = "PROC12-AIG2-Architecting-Connected-Procurement-Enterprises"
+# SCM — canonical MDM code + Wisdom code + BootCamp title
+SERIES_FOLDER_NAMES["SCM01"] = "SCM01-ASC1-Architecting-Autonomous-Supply-Chain-Strategy"
+SERIES_FOLDER_NAMES["SCM02"] = "SCM02-APS2-Architecting-Intelligent-Demand-Planning"
+SERIES_FOLDER_NAMES["SCM03"] = "SCM03-APN3-Architecting-Integrated-Supply-Planning"
+SERIES_FOLDER_NAMES["SCM04"] = "SCM04-AMP4-Architecting-Smart-Manufacturing"
+SERIES_FOLDER_NAMES["SCM05"] = "SCM05-ADL5-Architecting-Autonomous-Logistics-Transportation"
+SERIES_FOLDER_NAMES["SCM06"] = "SCM06-AIN6-Architecting-Resilient-Inventory-Management"
+SERIES_FOLDER_NAMES["SCM07"] = "SCM07-AQC7-Architecting-Quality-Compliance-Excellence"
+SERIES_FOLDER_NAMES["SCM08"] = "SCM08-ACM8-Architecting-Supplier-Collaboration-Excellence"
+SERIES_FOLDER_NAMES["SCM09"] = "SCM09-ASD9-Architecting-Sustainable-Supply-Chains"
+SERIES_FOLDER_NAMES["SCM10"] = "SCM10-AAN0-Architecting-Supply-Chain-Intelligence"
+SERIES_FOLDER_NAMES["SCM11"] = "SCM11-AAI1-Architecting-AI-Powered-Supply-Chain-Enterprises"
+SERIES_FOLDER_NAMES["SCM12"] = "SCM12-AIG2-Architecting-Connected-Supply-Chain-Ecosystems"
+# BTM — canonical MDM code + Wisdom code + BootCamp title
+SERIES_FOLDER_NAMES["BTM01"] = "BTM01-ABT1-Architecting-Autonomous-Enterprise-Strategy"
+SERIES_FOLDER_NAMES["BTM02"] = "BTM02-ARP2-Architecting-Future-Ready-Enterprise-Architecture"
+SERIES_FOLDER_NAMES["BTM03"] = "BTM03-APM3-Architecting-Process-Driven-High-Performance-Enterprises"
+SERIES_FOLDER_NAMES["BTM04"] = "BTM04-ACH4-Architecting-Change-Ready-Adaptive-Organizations"
+SERIES_FOLDER_NAMES["BTM05"] = "BTM05-AVP5-Architecting-Value-Driven-Transformation"
+SERIES_FOLDER_NAMES["BTM06"] = "BTM06-ATD6-Architecting-Data-Driven-Enterprises"
+SERIES_FOLDER_NAMES["BTM07"] = "BTM07-ATE7-Architecting-Digital-Cloud-Enabled-Enterprises"
+SERIES_FOLDER_NAMES["BTM08"] = "BTM08-AIO8-Architecting-Connected-Enterprise-Ecosystems"
+SERIES_FOLDER_NAMES["BTM09"] = "BTM09-ARG9-Architecting-Trust-Risk-Resilient-Enterprises"
+SERIES_FOLDER_NAMES["BTM10"] = "BTM10-AAN0-Architecting-Transformation-Intelligence"
+SERIES_FOLDER_NAMES["BTM11"] = "BTM11-AAI1-Architecting-AI-Powered-Enterprises"
+SERIES_FOLDER_NAMES["BTM12"] = "BTM12-AEC2-Architecting-Sustainable-Future-Ready-Enterprises"
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -70,7 +137,7 @@ def main():
         series=r["Series Code"]
         tier_number=int(r["Tier Level (1-5)"])
         if tier_number not in TIER_FOLDERS: sys.exit("Invalid tier number")
-        series_folder=HR_SERIES_NAMES.get(series,series) if r["Academy Code"]=="HR" else series
+        series_folder=SERIES_FOLDER_NAMES.get(series,series)
         path=ROOT / ACADEMY_FOLDERS[r["Academy Code"]] / series_folder / f'{SECTOR_ORDER[r["Sector Code"]]:02d}-{series}-{r["Sector Code"]}-{slug(r["Sector Name"])}' / TIER_FOLDERS[tier_number] / slug(r["Learning Format"])
         origin_dir=path.parent.parent/"0-The-Origin-Story"
         origin_units[str(origin_dir)]=(r["Unit ID"],r["Unit Title"])
