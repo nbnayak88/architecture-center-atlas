@@ -10,6 +10,8 @@ FIELDS = ["Pathway ID","Index #","Unit ID","Unit Title","Sector Code","Sector Na
 EXPECTED = 31680
 SECTOR_ORDER = {'ENE':1,'MAT':2,'IND':3,'CD':4,'CS':5,'HC':6,'FIN':7,'IT':8,'COM':9,'UT':10,'RE':11}
 
+TIER_FOLDERS = {1:"01-Pre-Foundation",2:"02-Foundation",3:"03-Essentials",4:"04-Advanced",5:"05-Ultimate"}
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -38,9 +40,14 @@ def main():
     if len(sectors)!=11: sys.exit("Expected 11 sectors")
     if set(sectors) != set(SECTOR_ORDER): sys.exit('Unexpected GICS sector codes')
     seen=set()
+    origin_units={}
     for r in records:
         series=r["Series Code"]
-        path=ROOT / f'{r["Academy Code"]}-{slug(r["Academy Name"])}' / series / f'{SECTOR_ORDER[r["Sector Code"]]:02d}-{series}-{r["Sector Code"]}-{slug(r["Sector Name"])}' / f'{r["Curriculum Tier"]}-{r["Tier Level (1-5)"]}' / slug(r["Learning Format"])
+        tier_number=int(r["Tier Level (1-5)"])
+        if tier_number not in TIER_FOLDERS: sys.exit("Invalid tier number")
+        path=ROOT / f'{r["Academy Code"]}-{slug(r["Academy Name"])}' / series / f'{SECTOR_ORDER[r["Sector Code"]]:02d}-{series}-{r["Sector Code"]}-{slug(r["Sector Name"])}' / TIER_FOLDERS[tier_number] / slug(r["Learning Format"])
+        origin_dir=path.parent.parent/"0-The-Origin-Story"
+        origin_units[str(origin_dir)]=(r["Unit ID"],r["Unit Title"])
         if path in seen: sys.exit(f"Duplicate target folder: {path}")
         seen.add(path)
         path.mkdir(parents=True,exist_ok=True)
@@ -71,6 +78,18 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
 """
         (path/"README.md").write_text(text,encoding="utf-8")
     assert len(seen)==EXPECTED
+    if len(origin_units)!=792: sys.exit("Expected 792 unique Origin Story units")
+    for origin_path,(unit_id,unit_title) in origin_units.items():
+        origin=Path(origin_path)
+        origin.mkdir(parents=True,exist_ok=True)
+        (origin/"README.md").write_text(
+            "# The Origin Story — "+clean(unit_title)+"\\n\\n"
+            +"**Unit ID:** "+clean(unit_id)+"\\n\\n"
+            +"**Level:** 0 — The Origin Story\\n\\n"
+            +"**Status:** Curriculum placeholder; not a published HUB pathway.\\n\\n"
+            +"Explore the origin, evolution, business context and architecture foundations of this unit.\\n\\n"
+            +"The authoritative HUB CSV contains Levels 1–5 only. No Level 0 Pathway ID or content is invented.\\n",
+            encoding="utf-8")
     ROOT.mkdir(exist_ok=True)
     with (ROOT/"catalog.csv").open("w",encoding="utf-8",newline="") as f:
         writer=csv.DictWriter(f,fieldnames=[x for x in FIELDS if x!="Allocated Member"])
@@ -79,12 +98,12 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
     (ROOT/"README.md").write_text(
         "# SuccessLabs Academy — Learning Township\n\n"
         "**31,680 HUB catalog pathways** = 792 learning units × 5 curriculum tiers × 8 learning formats.\n\n"
-        "Explore **6 academies → 12 series → 11 GICS sectors → 5 curriculum tiers → 8 learning formats**.\n\n"
+        "Explore **6 academies → 12 series → 11 GICS sectors → 6 curriculum tiers (0–5); formats available for Levels 1–5**.\n\n"
         "This township is separate from the **2,640 vendor-neutral Architecture Learning Journeys** under `learning-journeys/`.\n\n"
         "The source of truth is the uploaded HUB CSV. The published catalog excludes allocated-member names. "
         "Available/Occupied describes township allocation, **not** live-course status.\n\n"
         "See [catalog.csv](catalog.csv) for a searchable catalog index.\n",encoding="utf-8")
-    print(f"Created {len(seen):,} unique pathway folders across {len(units)} units.")
+    print(f"Created {len(seen):,} HUB pathway folders plus {len(origin_units):,} Origin Story placeholders.")
 
 if __name__=="__main__":
     main()
