@@ -8,6 +8,7 @@ SOURCE = Path("township-source/successlabs_township_31680_learning_pathways.csv"
 ROOT = Path("Learning Township")
 FIELDS = ["Pathway ID","Index #","Unit ID","Unit Title","Sector Code","Sector Name","Academy Code","Academy Name","Series Code","Curriculum Tier","Tier Level (1-5)","Learning Format","Objective","Duration","Student Output","Unit Occupancy Status","Allocated Member"]
 EXPECTED = 31680
+LIT_EXPECTED = 5280
 SECTOR_ORDER = {'ENE':1,'MAT':2,'IND':3,'CD':4,'CS':5,'HC':6,'FIN':7,'IT':8,'COM':9,'UT':10,'RE':11}
 
 TIER_FOLDERS = {1:"01-Pre-Foundation",2:"02-Foundation",3:"03-Essentials",4:"04-Advanced",5:"05-Ultimate"}
@@ -197,6 +198,63 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
             "Five life areas: spiritual, social, academic, professional, personal. "
             "Future curriculum emphasizes activities, simulations, reflection, and evidence. "
             "No sector pathways or LMS identifiers have been created.\\n", encoding="utf-8")
+    # Planned LIT pathways: 12 programs x 11 GICS sectors x 5 tiers x 8 HUB formats.
+    # Reuse sector, tier, and format vocabulary from the authoritative HUB export;
+    # do not invent HUB enrollment IDs, prices, or publication status.
+    sector_labels = {}
+    tier_labels = {}
+    for r in records:
+        sector_labels[r["Sector Code"]] = r["Sector Name"]
+        tier_labels[int(r["Tier Level (1-5)"])] = r["Curriculum Tier"]
+    lit_rows = []
+    for mdm, (wisdom, title) in LIT_SERIES.items():
+        series_folder = lit / f"{mdm}-{wisdom}-{re.sub(r'[^A-Za-z0-9]+', '-', title).strip('-')}"
+        for sector_code, order in sorted(SECTOR_ORDER.items(), key=lambda item: item[1]):
+            sector_name = sector_labels[sector_code]
+            sector_folder = series_folder / f"{order:02d}-{mdm}-{sector_code}-{slug(sector_name)}"
+            origin = sector_folder / "0-The-Origin-Story"
+            origin.mkdir(parents=True, exist_ok=True)
+            (origin/"README.md").write_text(
+                f"# The Origin Story — {title}\\n\\n**Sector:** {sector_name}  \\n"
+                "**Level:** 0 — The Origin Story  \\n**Status:** Planned, not counted among 5,280 pathways.\\n\\n"
+                "Explore the origins of identity, values, leadership and purpose in this sector.\\n",
+                encoding="utf-8")
+            for tier_number in sorted(TIER_FOLDERS):
+                for fmt in formats:
+                    planned_id = f"LIT-{mdm}-{sector_code}-L{tier_number}-{slug(fmt)}"
+                    path = sector_folder / TIER_FOLDERS[tier_number] / slug(fmt)
+                    path.mkdir(parents=True, exist_ok=True)
+                    (path/"README.md").write_text(
+                        f"# {title} — {fmt}\\n\\n"
+                        f"**Planning Reference (not an LMS ID):** \`{planned_id}\`  \\n"
+                        f"**MDM Code:** {mdm}  \\n**Wisdom Code:** {wisdom}  \\n"
+                        f"**GICS Sector:** {sector_name} ({sector_code})  \\n"
+                        f"**Curriculum Tier:** {tier_labels[tier_number]} (Level {tier_number})  \\n"
+                        f"**Learning Format:** {fmt}  \\n**Status:** Planned; no live course or enrollment implied.\\n\\n"
+                        "## Activity-first learning\\n"
+                        "Explore an authentic sector-based leadership or identity challenge. "
+                        "Complete a decision simulation, reflect on choices and consequences, "
+                        "and produce evidence across spiritual, social, academic, professional, "
+                        "and personal life goals. These are curriculum design intentions, not completed lesson plans.\\n",
+                        encoding="utf-8")
+                    lit_rows.append({
+                        "Planning Reference": planned_id, "MDM Code": mdm, "Wisdom Code": wisdom,
+                        "Program": title, "Sector Code": sector_code, "Sector Name": sector_name,
+                        "Tier Level": tier_number, "Curriculum Tier": tier_labels[tier_number],
+                        "Learning Format": fmt, "Status": "Planned", "LMS ID": ""})
+    if len(lit_rows) != LIT_EXPECTED:
+        sys.exit(f"Expected {LIT_EXPECTED} LIT pathways, found {len(lit_rows)}")
+    with (lit/"lit-planned-pathways.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(lit_rows[0]))
+        writer.writeheader()
+        writer.writerows(lit_rows)
+    (lit/"README.md").write_text(
+        "# LIT — Leadership and Identity Transformation Capability Academy\\n\\n"
+        "**Source Sunday**\\n\\n"
+        "**5,280 planned pathways** = 12 programs × 11 GICS sectors × 5 tiers × 8 formats. "
+        "An additional 132 Level-0 Origin Story folders are excluded from this count.\\n\\n"
+        "These are planning records, **not** imported HUB courses, LMS IDs, published lessons, or enrollments. "
+        "See [LIT planned pathway catalog](lit-planned-pathways.csv).\\n", encoding="utf-8")
     assert len(seen)==EXPECTED
     if len(origin_units)!=792: sys.exit("Expected 792 unique Origin Story units")
     for origin_path,(unit_id,unit_title) in origin_units.items():
@@ -218,12 +276,12 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
     (ROOT/"README.md").write_text(
         "# SuccessLabs Academy — Learning Township\n\n"
         "**31,680 HUB catalog pathways** = 792 learning units × 5 curriculum tiers × 8 learning formats.\n\n"
-        "Explore **7 academy folders (6 populated from HUB, 1 new LIT scaffold) → 12 series → 11 GICS sectors → 6 curriculum tiers (0–5); formats available for Levels 1–5**.\n\n"
+        "Explore **7 academy folders (6 populated from HUB, 1 planned LIT academy) → 12 series → 11 GICS sectors → 6 curriculum tiers (0–5); formats available for Levels 1–5**.\n\n"
         "This township is separate from the **2,640 vendor-neutral Architecture Learning Journeys** under `learning-journeys/`.\n\n"
         "The source of truth is the uploaded HUB CSV. The published catalog excludes allocated-member names. "
         "Available/Occupied describes township allocation, **not** live-course status.\n\n"
         "See [catalog.csv](catalog.csv) for a searchable catalog index.\n",encoding="utf-8")
-    print(f"Created {len(seen):,} HUB pathway folders plus {len(origin_units):,} Origin Story placeholders.")
+    print(f"Created {len(seen):,} HUB pathways, {len(lit_rows):,} planned LIT pathways and {len(origin_units)+132:,} Origin Story placeholders.")
 
 if __name__=="__main__":
     main()
