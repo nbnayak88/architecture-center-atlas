@@ -289,7 +289,7 @@ No numeric target or realized improvement is asserted.
 | [SAP — Job requisitions](https://help.sap.com/docs/successfactors-recruiting/setting-up-and-maintaining-sap-successfactors-recruiting/025f199fb0ca4b65b8ac1ee2944d22c4.html) | 3 minutes during build | Which roles, fields and local differences require configuration? |
 | [NIST AI RMF Core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) | Optional next-step reading | How will the owner govern, map, measure and manage risks of assistance? |
 
-Official SAP resources checked 2026-10-19. Access and tenant behavior may vary. This is not a recommendation to migrate products or a claim that optional AI functionality is enabled. The sprint follows the case's SuccessFactors Recruiting context.
+Official SAP resources checked 2026-10-19. Access and tenant behavior may vary. This is not a recommendation to migrate products or a claim that optional AI functionality is enabled. The sprint retains the case's SuccessFactors Recruiting context while comparing current SAP and cross-vendor alternatives below.
 
 ## 10. Five-minute rapid review
 
@@ -304,6 +304,66 @@ Official SAP resources checked 2026-10-19. Access and tenant behavior may vary. 
 **Pass phrase:** “A faster pipeline is valuable only when its decisions remain relevant, explainable and accountable.”
 
 **Next Pre-Foundation experiment:** define one role's requisition fields, application stages, approved assessment rubric, permissions, message triggers and handoff acceptance. Validate with Arjun, the hiring owner and the candidate perspective.
+
+### Modern talent-acquisition solution landscape — current resource map
+
+**Reviewed: 19 October 2026.** This is a representative learning shortlist of prominent platforms and specialist solutions, not an exhaustive market inventory or an independently validated “best product” ranking. Official pages establish advertised scope; leadership, performance and suitability need separate evidence. Some capabilities require additional licenses, configuration or integrations.
+
+**Important portfolio context:** SAP completed its acquisition of SmartRecruiters in September 2025. SAP now presents **SmartRecruiters for SAP SuccessFactors**, with documented 2026 integration work. Study it alongside the existing SuccessFactors Recruiting landscape; do not infer an automatic migration, identical features or a universal retirement date. Workday completed its Paradox acquisition in October 2025; its portfolio also includes HiredScore. These are related portfolio components, not three unrelated suite competitors.
+
+#### A. Core recruiting, enterprise suites and onboarding
+
+| Solution and official resource | What to study | Energy case question / implementation lesson |
+|---|---|---|
+| **[SAP SuccessFactors Recruiting — SAP Learning](https://learning.sap.com/courses/navigating-the-employee-lifecycle-through-sap-successfactors/overview-of-sap-successfactors-recruiting)** / [SAP Help](https://help.sap.com/docs/successfactors-recruiting) | Recruiter experience, requisitions, candidate/application objects, attraction, assessments and offer processes | How will Arjun define shared recruiting states, permissions and evidence for grid and offshore roles? |
+| **[SmartRecruiters for SAP SuccessFactors](https://www.sap.com/products/hcm/recruiting-software.html)** / [SmartRecruiters](https://www.smartrecruiters.com/) | Recruiting ATS/CRM, recruiter and candidate journeys, recruiting automation; inspect the specific connected-SAP scope | What remains in SmartRecruiters, what is handed to EC/Onboarding, and how will the receiving application confirm completion? |
+| **[SAP SuccessFactors Onboarding — SAP Help](https://help.sap.com/docs/successfactors-onboarding)** | Pre-start activities, responsibilities, data collection and configured employment/readiness handoffs | What happens after Noor accepts? Which readiness activities remain outside recruiting? Onboarding is an adjacent lifecycle product, not a competing ATS |
+| **[Workday recruiting / AI recruiting](https://www.workday.com/en-us/products/talent-management/ai-recruiting.html)** | Recruiting within an HCM ecosystem and the relationship to HiredScore and Paradox | Compare demand, candidate, offer and worker handoffs with the SAP-centered case without assuming the same object model |
+| **[Oracle Recruiting and Recruiting Booster](https://www.oracle.com/human-capital-management/recruiting/)** / [Oracle documentation](https://docs.oracle.com/en/cloud/saas/talent-management/faush/index.html) | Recruiting in Oracle Fusion Cloud HCM, candidate engagement and recruiting workflows | What is shared with HCM, and which recruiting controls still need explicit ownership? |
+| **[iCIMS](https://www.icims.com/)** | Enterprise ATS, engagement, career sites, high-volume hiring and onboarding offerings | Can renewable-project volume and specialist offshore evidence coexist under governed variants? |
+| **[Avature](https://www.avature.net/)** | Configurable recruiting/talent platform, CRM and talent engagement | Where does configurable flexibility help a global/local model, and where does it create maintenance complexity? |
+| **[Greenhouse](https://www.greenhouse.com/)** | Structured hiring, recruiting workflows and interview/decision consistency | Can assessors use a job-relevant rubric and document why a candidate progresses? |
+| **[Lever](https://www.lever.co/)** | ATS and candidate relationship management | How do ongoing candidate relationships differ from job-specific applications and decisions? |
+| **[Ashby](https://www.ashbyhq.com/)** | Integrated recruiting operations, ATS, scheduling, CRM and analytics | Can the team connect stage definitions, scheduling and funnel measures without conflicting meanings? |
+| **[Workable](https://www.workable.com/)** | Recruiting alongside broader HR functions | Use as a contrasting architecture example for a smaller operating scope; validate whether global complexity is supported |
+| **[Zoho Recruit](https://www.zoho.com/recruit/)** | Corporate recruiting and staffing-agency workflows | How do agency submissions, candidate ownership and employer-side selection differ? |
+
+#### B. Talent intelligence, experience and recruiting assistance
+
+These solutions can overlap core ATS functions or provide a separate layer. Classify the **specific deployment and module**, not just the vendor name.
+
+| Solution and official resource | Learning focus | Evidence / boundary to examine |
+|---|---|---|
+| **[Phenom](https://www.phenom.com/)** | Talent experience, career journeys and AI-enabled recruiting services | Which interactions does it orchestrate, and which application owns the authoritative application state? |
+| **[Eightfold AI](https://eightfold.ai/)** | Talent intelligence, skills matching and talent acquisition | How are claimed/inferred skills distinguished from validated job-relevant evidence? |
+| **[Beamery](https://beamery.com/)** | Talent relationships, skills and workforce-transformation capabilities | How does pipeline intelligence inform demand without becoming an unreviewed hiring decision? |
+| **[Workday HiredScore](https://doc.workday.com/admin-guide/en-us/workday-feature-descriptions/workday-hiredscore/hiredscore-ai-for-recruiting.html)** | Recruiting assistance and prioritization within the Workday ecosystem | What recommendation is produced, what evidence supports it, and how does an authorized reviewer challenge it? |
+| **[Paradox — Workday acquisition/product context](https://newsroom.workday.com/2025-10-01-Workday-Completes-Acquisition-of-Paradox)** | Conversational candidate engagement and interview scheduling | When may an assistant act, what state triggers communication, and when must it escalate? |
+
+#### C. Sourcing, interviewing and assessment
+
+| Solution and official resource | Learning focus | Energy boundary |
+|---|---|---|
+| **[LinkedIn hiring tools](https://business.linkedin.com/hire)** | Professional sourcing, recruiter search, jobs and employer visibility | A professional profile is sourcing evidence, not verified technical qualification |
+| **[Indeed employer tools](https://www.indeed.com/hire)** | Job distribution, candidate discovery and employer hiring services | Reach and application volume do not establish assessment quality |
+| **[HireVue](https://www.hirevue.com/)** | Interviewing, assessment and scheduling offerings | Validate job relevance, accessibility and human review; a platform result does not authorize offshore work |
+
+**Historical-to-modern connection:** job boards widen reach; ATS platforms organize applications; CRM sustains relationships; suites connect hiring and employment; intelligence/assistance layers propose and coordinate. These are application responsibilities, not a requirement to buy one product from every row.
+
+#### A focused resource route within this two-hour sprint
+
+Do **not** attempt all resources in two hours. Use the existing resource-reading time as follows:
+1. **SAP baseline — 5 minutes:** skim SuccessFactors Recruiting and Onboarding; sketch the hire-to-readiness boundary.
+2. **Modern SAP comparison — 4 minutes:** review SmartRecruiters for SAP SuccessFactors and identify one changed responsibility or handoff to investigate.
+3. **Cross-suite contrast — 4 minutes:** choose Workday or Oracle and compare the same requisition-to-hire scenario.
+4. **Specialist contrast — 3 minutes:** choose one ATS, intelligence, sourcing or assessment resource above. Explain what it adds and which owner remains accountable.
+
+**One-row comparison artifact:** solution/module → role in landscape → authoritative objects → decision rights → integration/acceptance → privacy/access → evidence required → fit/gap. Add this to the existing Build Card; do not add another deliverable.
+
+**For an eventual energy-enterprise shortlist:** evaluate global/local requirements, multilingual and accessible journeys, scarce-skill and high-volume hiring, agency controls, credential-verification boundaries, EC/payroll/onboarding handoffs, auditability, AI oversight, deployment/data-residency options, support, total cost and exit/data portability. Obtain demonstrations against the same synthetic cases. Vendor claims and polished demos are hypotheses until verified against requirements.
+
+**Current official portfolio references:** [SAP acquisition completion](https://news.sap.com/2025/09/sap-completes-smartrecruiters-acquisition/), [SAP's 2026 SmartRecruiters integration release note](https://help.sap.com/docs/successfactors-release-information/8e0d540f96474717bbf18df51e54e522/2b6c582929db4ea0b1f7c62388170f18.html), and [Workday's Paradox acquisition completion](https://newsroom.workday.com/2025-10-01-Workday-Completes-Acquisition-of-Paradox). Consult current release documentation for licensed availability; an acquisition announcement does not prove every feature is generally available.
+
 
 ### Historical anchors and future-reading resources
 - **H1 — [Monster Worldwide SEC filing, 2003](https://www.sec.gov/Archives/edgar/data/1020416/000104746903037619/a2121724zs-3a.htm):** primary-source anchor for Monster Board's 1994 origin. Read selectively for online recruitment history.
