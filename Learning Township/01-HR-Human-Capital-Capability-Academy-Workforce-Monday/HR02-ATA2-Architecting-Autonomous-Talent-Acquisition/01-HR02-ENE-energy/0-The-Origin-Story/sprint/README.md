@@ -11,6 +11,8 @@
 [**From finding workers to earning candidate trust — Talent Acquisition Evolution Sprint**](energy-talent-acquisition-evolution-sprint.md)
 
 Start with talent acquisition in general, then apply its evolution to OmniVerse Energy:
+- Recruitment process evolution from **1975–2026**, with dated historical anchors.
+- Future perspectives for **2030, 2035, 2040 and 2050**, including three alternative 2050 scenarios and a future story scene.
 - Five generations: find → standardize → track → orchestrate → assist.
 - Canonical Arjun, Sofia, Kwesi, Elena and Noor personas with stable source IDs.
 - Exact 120-minute agenda, application ownership, six key objects and two role variants.
