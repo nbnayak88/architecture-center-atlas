@@ -8,8 +8,8 @@ SOURCE = Path("township-source/successlabs_township_31680_learning_pathways.csv"
 ROOT = Path("Learning Township")
 FIELDS = ["Pathway ID","Index #","Unit ID","Unit Title","Sector Code","Sector Name","Academy Code","Academy Name","Series Code","Curriculum Tier","Tier Level (1-5)","Learning Format","Objective","Duration","Student Output","Unit Occupancy Status","Allocated Member"]
 EXPECTED = 31680
-LIT_EXPECTED = 6336
-HUB_ORIGIN_EXPECTED = 6336
+LIT_EXPECTED = 5412
+HUB_ORIGIN_EXPECTED = 792
 SECTOR_ORDER = {'ENE':1,'MAT':2,'IND':3,'CD':4,'CS':5,'HC':6,'FIN':7,'IT':8,'COM':9,'UT':10,'RE':11}
 
 TIER_FOLDERS = {1:"01-Pre-Foundation",2:"02-Foundation",3:"03-Essentials",4:"04-Advanced",5:"05-Ultimate"}
@@ -217,11 +217,11 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
             origin.mkdir(parents=True, exist_ok=True)
             (origin/"README.md").write_text(
                 f"# The Origin Story — {title}\\n\\n**Sector:** {sector_name}  \\n"
-                "**Level:** 0 — The Origin Story  \\n**Access:** Free — Community/Citizen Edition.  \\n**Status:** Planned, included in 6,336 LIT pathways.\\n\\n"
+                "**Level:** 0 — The Origin Story  \\n**Access:** Free — Community/Citizen Edition.  \\n**Status:** Planned, included in 5,412 LIT pathways.\\n\\n"
                 "Explore the origins of identity, values, leadership and purpose in this sector.\\n",
                 encoding="utf-8")
             for tier_number in [0, *sorted(TIER_FOLDERS)]:
-                for fmt in formats:
+                for fmt in ([fmt for fmt in formats if slug(fmt) == "sprint"] if tier_number == 0 else formats):
                     planned_id = f"LIT-{mdm}-{sector_code}-L{tier_number}-{slug(fmt)}"
                     path = sector_folder / ("0-The-Origin-Story" if tier_number == 0 else TIER_FOLDERS[tier_number]) / slug(fmt)
                     path.mkdir(parents=True, exist_ok=True)
@@ -252,8 +252,8 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
     (lit/"README.md").write_text(
         "# LIT — Leadership and Identity Transformation Capability Academy\\n\\n"
         "**Source Sunday**\\n\\n"
-        "**6,336 planned pathways** = 12 programs × 11 GICS sectors × 6 tiers × 8 formats. "
-        "Level 0 includes 1,056 free Community/Citizen Edition pathways; Levels 1–5 include 5,280 paid pathways.\\n\\n"
+        "**5,412 planned pathways** = 12 programs × 11 GICS sectors × (1 Origin sprint + 5 paid tiers × 8 formats). "
+        "Level 0 includes 132 free Community/Citizen Edition sprint pathways; Levels 1–5 include 5,280 paid pathways.\\n\\n"
         "These are planning records, **not** imported HUB courses, LMS IDs, published lessons, or enrollments. "
         "See [LIT planned pathway catalog](lit-planned-pathways.csv).\\n", encoding="utf-8")
     assert len(seen)==EXPECTED
@@ -270,10 +270,10 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
             +"Explore the origin, evolution, business context and architecture foundations of this unit.\\n\\n"
             +"The authoritative HUB CSV contains Levels 1–5 only. No Level 0 Pathway ID or content is invented.\\n",
             encoding="utf-8")
-    # Every HUB unit receives eight free Level-0 format pathways, without modifying LMS IDs.
+    # Every HUB unit receives one free Level-0 sprint pathway, without modifying LMS IDs.
     for origin_path,(unit_id,unit_title,academy_code,series,sector_code,sector_name) in origin_units.items():
         origin=Path(origin_path)
-        for fmt in formats:
+        for fmt in [fmt for fmt in formats if slug(fmt) == "sprint"]:
             ref=f"HUB-ORIGIN-{unit_id}-{slug(fmt)}"
             path=origin/slug(fmt)
             path.mkdir(parents=True,exist_ok=True)
@@ -301,7 +301,7 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
     (ROOT/"README.md").write_text(
         "# SuccessLabs Academy — Learning Township\n\n"
         "**31,680 HUB catalog pathways** = 792 learning units × 5 curriculum tiers × 8 learning formats.\n\n"
-        "Explore **7 academy folders (6 populated from HUB, 1 planned LIT academy) → 12 series → 11 GICS sectors → 6 curriculum tiers (0–5); eight formats available for every level**.\n\n"
+        "Explore **7 academy folders (6 populated from HUB, 1 planned LIT academy) → 12 series → 11 GICS sectors → 6 curriculum tiers (0–5); sprint only at Level 0; eight formats at Levels 1–5**.\n\n"
         "This township is separate from the **2,640 vendor-neutral Architecture Learning Journeys** under `learning-journeys/`.\n\n"
         "The source of truth is the uploaded HUB CSV. The published catalog excludes allocated-member names. "
         "Available/Occupied describes township allocation, **not** live-course status.\n\n"
