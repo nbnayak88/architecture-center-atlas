@@ -12,7 +12,7 @@
 ## 1. What this sprint achieves
 
 In 120 minutes, you will:
-1. Explain the general origin and five overlapping generations of talent acquisition.
+1. Explain recruitment's process evolution from 1975 to 2026, using five overlapping generations as a mental model, and compare possible futures through 2050.
 2. Translate that evolution into energy-sector hiring needs without assuming every role needs the same controls.
 3. Distinguish position, requisition, candidate, application, assessment and offer.
 4. Assign application responsibilities from approved demand to employment handoff.
@@ -49,6 +49,67 @@ Periods below are broad teaching contexts, not official classifications or unive
 **The evolutionary test:** ask what problem a new application solves, what old problem persists, and what new control it needs. A chatbot attached to a fragmented recruiting process does not establish a coherent talent-acquisition architecture.
 
 **Autonomous, in this learning series:** bounded orchestration of approved tasks, with observable outcomes and human escalation. It does not mean unreviewed employment decisions.
+
+### Recruitment across the last 50 years — 1975 to 2026
+
+Read each row as a change in the **recruiting process**, not merely a new tool. Dates indicate broad patterns of adoption; practices overlapped and differed by region and employer. Earlier practices continue today. The decade grouping is a teaching synthesis, not a claim that a method was invented in that decade.
+
+| Era | How recruitment commonly worked | What changed for the recruiter and candidate | Persistent limitation | Illustrative energy-sector application |
+|---|---|---|---|---|
+| **1975–1984: paper and personal networks** | Hiring need → personnel approval → newspaper notice/referral/agency → mailed or walk-in application → telephone/in-person interview → references → paper offer | Recruiters managed files and calls; candidates depended on local information and personal reach | Slow communication, narrow networks, inconsistent interview records | A refinery seeks maintenance trades through local networks and apprenticeships; competence checks depend heavily on documented evidence and supervisors |
+| **1985–1994: computer-assisted administration** | Paper-led process increasingly supported by spreadsheets, personnel databases, fax and electronic records | Lists and records become easier to search and reconcile; much candidate interaction remains offline | Digitized records do not guarantee consistent criteria or current qualifications | A growing energy group consolidates vacancy lists but agencies and sites retain separate candidate files |
+| **1995–2004: online job boards and application tracking** | Requisition → online advert/career page → electronic CV/application → searchable applicant record → screening → interviews → offer | Geographic reach and application volume expand; recruiters manage electronic queues and search criteria | Volume overload, duplicate profiles, keyword filtering and impersonal rejection | International engineering searches widen; a searchable certificate claim still requires validation |
+| **2005–2014: professional networks and proactive sourcing** | Add professional-network search, candidate relationship management, talent pools, employer content and increasingly cloud/mobile services | Recruiters approach people who have not applied; candidates research employers and maintain visible career profiles | Visibility is unequal; profile popularity or network strength can become a weak proxy for ability | Recruiters build scarce-skill engineering communities and university pipelines before projects need hires |
+| **2015–2019: candidate journey and connected recruiting** | Attraction → easier mobile application → coordinated assessments/interviews → offer approvals → onboarding handoff; analytics examine funnel stages | Candidate experience and recruiter/hiring-manager coordination become more explicit design concerns | Separate services can still produce repeated forms, conflicting messages and weak accountability | Offshore and renewable hiring use shared core records with different role-specific evidence gates |
+| **2020–2022: remote selection at greater scale** | Pandemic conditions accelerate remote interviews and digital collaboration where feasible; remote and on-site activities are combined | Recruiters coordinate dispersed assessors; candidates may interview without travelling | Digital exclusion, accessibility and remote assessment quality need attention; site roles still require physical readiness | A grid engineer interviews remotely, while task-relevant practical assessment and site requirements remain separately governed |
+| **2023–2026: AI-assisted recruiting under scrutiny** | Some employers experiment with generated job content, scheduling assistants, search/matching and screening support | Administrative work may shrink; reviewers must inspect the evidence and limits behind recommendations | Biased proxies, fabricated candidate evidence, privacy concerns and opaque recommendations can undermine trust | Arjun pilots administrative assistance but retains accountable assessment, credential validation and hiring decisions |
+
+**Two documented landmarks:** Monster's own 2003 SEC filing identifies its origin as Monster Board in **1994**; LinkedIn states that its professional network launched on **5 May 2003**. These illustrate online distribution and professional networking; they do not date the invention of applicant tracking or prove universal adoption. [H1–H2]
+
+**What evolved in the process?**
+- **Finding:** local reach → online distribution → proactive communities and skills search.
+- **Assessing:** informal judgment → more structured evidence and scorecards, with uneven adoption → AI-supported review that still needs validation.
+- **Coordinating:** files/calls → application states and scheduling → connected workflows and visible exceptions.
+- **Relationship:** one vacancy/one transaction → ongoing candidate communities, internal mobility and career pathways.
+- **Success measures:** vacancies filled and processing speed broaden to quality, experience, fairness, retention and readiness. This is a design direction, not proof that every employer measures all of them.
+
+**Energy connection grounded in current research:** the IEA's *World Energy Employment 2025* identifies ageing workforces and skilled-labour shortages as constraints. It supports exploring pipelines, training and transferable skills; it does not validate OmniVerse's fictional hiring figures or predict this sprint's 2050 outcomes. [H3]
+
+### Future perspectives — 2030, 2040 and 2050
+
+**Everything in the following table is a scenario or design hypothesis.** Dates are exploration horizons, not product roadmaps, predictions, promised SAP features or regulatory forecasts. Use more than one possible future; adoption depends on economics, trust, institutions, infrastructure and energy-transition choices.
+
+| Horizon | Possible recruiting process | Possible energy-sector need | Application architecture implication | Human decision and evidence required |
+|---|---|---|---|---|
+| **2030: assisted recruiting operations** | Approved need → assistant drafts content/schedules → people assess evidence → authorized offer → acknowledged handoff | Faster staffing of grid, renewable and maintenance projects without relaxing role requirements | Shared requisition/application states, source references, permission boundaries, reviewer queue and message controls | Humans approve criteria, selection and offers; test administrative time saved alongside evidence completeness and candidate understanding |
+| **2035: skills evidence across careers** | Candidate chooses what evidence to share → employer verifies provenance → structured work sample → human review of adjacent skills → hire or reskill route | Experienced workers move between conventional energy, storage, grid and renewable roles where skills genuinely transfer | Separate identity, claimed skills, verified evidence, validity and job-specific assessment; support correction and scoped sharing | Determine whether evidence is current and relevant; a portable credential must not become automatic task authorization |
+| **2040: build, move or hire together** | Workforce gap → compare internal development/mobility, apprenticeships and external hiring → evaluate options → agree transition plan | Balance retirement replacement, new technical work and continued operation of existing assets | Planning, learning, mobility and recruiting exchange governed decision inputs while retaining distinct owners | Leaders and workers consider feasibility and impact; hiring speed alone cannot determine whether to retrain or recruit |
+| **2050: a possible continuous talent ecosystem** | Anticipate capability needs → maintain voluntary talent relationships → identify internal/external pathways → verify current evidence → human decision → ongoing learning/readiness | Adapt to whichever energy mix, operating models and regional skill constraints actually emerge | Modular applications, worker-controlled sharing where feasible, durable evidence provenance, replaceable AI services and auditable decision history | Preserve candidate choice, accessible non-AI routes, appeal and accountable decisions; assess opportunity access and sustained capability, not an autonomy percentage |
+
+**Three plausible 2050 worlds to compare:**
+
+| Scenario | What recruiting looks like | What could go wrong | Design choice useful now |
+|---|---|---|---|
+| **Trusted cooperation** | Portable evidence and well-governed assistance reduce repeated assessment and improve mobility | Exclusion of people without recognized digital evidence | Accept alternative evidence and provide accessible human review |
+| **Fragmented ecosystems** | Employers, countries and providers use incompatible identities, credentials and standards | Duplicate effort, conflicting meanings and stalled cross-border hiring | Keep data definitions, provenance and vendor-independent boundaries explicit |
+| **Low-trust automation** | Candidates and employers distrust generated profiles, scores and opaque recommendations | Escalating verification costs and unfair rejection | Preserve verifiable sources, job-relevant work samples, challenge routes and manual fallback |
+
+**Do not confuse energy scenarios with recruitment forecasts:** a particular future energy mix does not mechanically determine job numbers or qualifications. Technology choices, productivity, investment timing, geography and training change labour demand. No 2050 workforce count is asserted here.
+
+**One enduring thread, 1975–2050:** the medium may move from paper to AI assistance; the recruiting responsibility remains to establish a justified need, assess relevant evidence, earn candidate trust and make an accountable decision.
+
+### A 2050 story scene — the candidate chooses the pathway
+
+*Imagined future design workshop; not a biographical forecast for today's source personas.*
+
+Arjun asks the workshop to imagine a 2050 candidate with experience in conventional generation who wants to work in storage operations. The candidate shares selected evidence, then asks, “Are you matching me to a job title, or helping me demonstrate what I can do?”
+
+In this scenario, a service identifies potentially adjacent skills but cannot verify every claim. The team proposes a work sample and a learning route for the missing competence. Elena's privacy perspective challenges unnecessary data collection; Kwesi's safety perspective keeps site authorization separate. Sofia's business perspective compares recruiting externally with developing an internal worker.
+
+The group does not announce a fully autonomous hire. It records evidence, alternatives, a human decision and a candidate-agreed next step.
+
+**Learner challenge:** Which part of this 2050 scenario could you prototype today, which assumption needs validation, and what evidence would make you abandon it?
+
 
 ## 3. Apply the story to OmniVerse Energy
 
@@ -164,8 +225,8 @@ This sprint defines application responsibilities and acceptance. HR12 covers det
 | Minutes | Activity | Learning evidence |
 |---|---|---|
 | 0–10 | Read purpose and five essential concepts; compare recruitment and talent acquisition | Two-sentence purpose and boundary statement |
-| 10–30 | Rebuild the general five-generation timeline | Five “problem → response → remaining gap” rows |
-| 30–50 | Read energy pressures and scenes 1–3 | Translate three general lessons into energy requirements |
+| 10–30 | Rebuild the 1975–2026 decade timeline using the five-generation model | Seven dated “process → improvement → remaining gap” rows |
+| 30–50 | Compare 2030–2050 scenarios, then connect them to energy pressures and scenes 1–3 | Three energy requirements plus one 2050 hypothesis and a competing future |
 | 50–65 | Simulate scenes 4–6 as Arjun; question Sofia, Kwesi, Elena and Noor | Four needs, one question each and one challenged assumption |
 | 65–80 | Map objects and application ownership | Ownership map plus candidate/application distinction |
 | 80–100 | Build the two-role recruiting prototype below | State/gate matrix and a short architecture decision |
@@ -234,15 +295,21 @@ Official SAP resources checked 2026-10-19. Access and tenant behavior may vary. 
 
 | Minute | Recall without looking |
 |---|---|
-| 1 | Name five generations: find → standardize → track → orchestrate → assist. What problem survives each transition? |
+| 1 | Trace 1975 paper hiring → 1990s online applications → 2000s networks → 2010s connected journeys → 2020s assistance. What changed in the process? |
 | 2 | Distinguish position, requisition, candidate, application, evidence and offer. Can two applications for one person differ? |
 | 3 | Who owns attraction, recruiting states, validation, onboarding, employment and site authorization? |
 | 4 | Explain all three tests. Which administrative task can be accelerated without removing a decision gate? |
-| 5 | Give Sofia a 60-second answer: how will you increase speed while preserving evidence, fairness and candidate trust? |
+| 5 | Give Sofia a 60-second answer: what changed over 50 years, what might change by 2050, and which responsibility must remain? |
 
 **Pass phrase:** “A faster pipeline is valuable only when its decisions remain relevant, explainable and accountable.”
 
 **Next Pre-Foundation experiment:** define one role's requisition fields, application stages, approved assessment rubric, permissions, message triggers and handoff acceptance. Validate with Arjun, the hiring owner and the candidate perspective.
+
+### Historical anchors and future-reading resources
+- **H1 — [Monster Worldwide SEC filing, 2003](https://www.sec.gov/Archives/edgar/data/1020416/000104746903037619/a2121724zs-3a.htm):** primary-source anchor for Monster Board's 1994 origin. Read selectively for online recruitment history.
+- **H2 — [LinkedIn's own history](https://careers.linkedin.com/WhyLinkedIn):** primary-source anchor for its 5 May 2003 launch. Ask how professional networks changed proactive sourcing.
+- **H3 — [IEA World Energy Employment 2025 — Executive summary](https://www.iea.org/reports/world-energy-employment-2025/executive-summary):** evidence on workforce ageing and skills constraints. Read the challenges, then distinguish them from our invented future responses.
+- The historical decade descriptions are broad synthesis. The **2030–2050 tables and story are explicitly speculative**, not sourced forecasts. These short scans fit within the timeline/scenario activity, not additional sprint time.
 
 ## 11. Sources, stable IDs and standards boundaries
 
