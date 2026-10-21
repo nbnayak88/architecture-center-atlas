@@ -27,7 +27,7 @@ This is a HUB catalog record, **not proof that a course is live or purchasable**
 
 Apply the Architecture Cohort's Application Architect path to Township → HR Academy → HR01/AWF1 → SAP SuccessFactors Employee Central Global Benefits. Process Architect remains under Business Architect. This is a learning cross-reference; the Architecture Journeys and Township catalogues retain their separate folder structure and IDs.
 
-- Architecture journey: [JL-00065 — Energy Application Architecture Build/IIL](../../../../../learning-journeys/01-energy/04-application-architecture/05-build-iil/README.md).
+- Architecture journey: [JL-00065 — Energy Application Architecture Build/IIL](https://github.com/nbnayak88/architecture-center-atlas/blob/main/learning-journeys/01-energy/04-application-architecture/05-build-iil/README.md).
 - Existing canonical source: [Global Benefits Implementation Bootcamp — SAP Cloud ALM + SF EC Global Benefits](https://github.com/nbnayak88/successlabs-hr-autonomous-workforce/blob/main/learning/global-benefits/configuration-sequence-engine/README.md).
 - GitHub: source of truth. Notion: knowledge management. TagMango HUB: Knowledge Engine and live sessions. Zenler SCHOOL: All-Activity Center and recordings.
 - The canonical source includes the eight starting bootcamp flavors, generic dual-platform curriculum and per-flavor 90-day engagement plans. Those specifications do not mean platform courses or campaigns are already published.
