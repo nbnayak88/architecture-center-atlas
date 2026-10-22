@@ -21,3 +21,16 @@ Improve P2P, FI/CO, SD, PP, EAM, inventory support and S/4HANA transformation kn
 
 ## How
 Validate API availability per edition and release; provision secure connectivity; index only approved documents; enforce authorization at retrieval; evaluate groundedness, performance, and auditability. Start with a common Purchase-to-Pay scenario across all three editions. SAP BTP is an optional/preferred side-by-side platform depending on edition, not mandatory for a separately self-hosted prototype.
+
+
+---
+
+### Curious to see this come alive?
+
+**How would one AI architecture adapt across three S/4HANA deployment models?**
+
+Explore the ideas freely here, then join a SuccessLabs Academy live learning session to discuss practical applications and hands-on experiments.
+
+**[Explore our live learning sessions](https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3?utm_source=github&utm_medium=learning_resource&utm_campaign=ai_architecture&utm_content=03-s4hana-three-deployments.md)**
+
+*No pressure, just curiosity, community and continuous learning.*
