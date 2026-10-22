@@ -161,3 +161,15 @@ Each domain follows Discover (4h), Connect (4h), Build (4h), Validate (4h), Show
 
 - https://help.sap.com/
 - https://api.sap.com/
+
+---
+
+### Curious to see this come alive?
+
+**Which of these 66 SuccessFactors AI use cases would you prototype first?**
+
+Explore the ideas freely here, then join a SuccessLabs Academy live learning session to discuss practical applications and hands-on experiments.
+
+**[Explore our live learning sessions](https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3?utm_source=github&utm_medium=learning_resource&utm_campaign=ai_architecture&utm_content=04-successfactors-66-use-cases.md)**
+
+*No pressure, just curiosity, community and continuous learning.*
