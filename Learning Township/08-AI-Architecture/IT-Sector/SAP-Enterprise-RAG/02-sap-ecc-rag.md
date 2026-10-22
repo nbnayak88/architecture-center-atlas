@@ -1,4 +1,4 @@
-# SAP ECC — What, Why, How
+# RAG for SAP ECC — What, Why, How
 
 ## What
 A separate customer-hosted Python RAG application integrating with SAP ECC 6.0 using approved read-only RFC/BAPI, OData where available, IDoc-based extracts, and curated documentation. Embeddings: Sentence-Transformers; search: FAISS-CPU; local LLM runtime: Ollama.
