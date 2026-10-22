@@ -1,1 +1,0 @@
-# The Origin Story — Architecting Continuous Learning\n\n**Sector:** Consumer Staples  \n**Level:** 0 — The Origin Story  \n**Access:** Free — Community/Citizen Edition.  \n**Status:** Planned, included in 6,336 LIT pathways.\n\nExplore the origins of identity, values, leadership and purpose in this sector.\n

@@ -191,3 +191,7 @@ The SAP Architecture Center remains the authoritative source for all reference a
 ---
 
 *Created by Adem Baykal*
+
+## SuccessLabs Learning Township
+
+Learning Township is maintained independently in [nbnayak88/learning-township](https://github.com/nbnayak88/learning-township). Its academy folders, catalogs, AI architecture content, and community resources are no longer nested in this repository.
