@@ -17,3 +17,16 @@ Evidence-grounded SAP support, configuration knowledge discovery, integration tr
 
 ## Architecture decision
 Keep SAP as system of record. Deploy Python RAG separately; use supported APIs, source-level permissions, authorized live reads, citations, auditing, and read-only initial operation. Fully local end-to-end operation is possible for on-premises SAP, but not for SaaS SAP SuccessFactors or S/4HANA Public Cloud.
+
+
+---
+
+### Curious to see this come alive?
+
+**What if the next architecture you study becomes something you can demonstrate?**
+
+Explore the ideas freely here, then join a SuccessLabs Academy live learning session to discuss practical applications and hands-on experiments.
+
+**[Explore our live learning sessions](https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3?utm_source=github&utm_medium=learning_resource&utm_campaign=ai_architecture&utm_content=README.md)**
+
+*No pressure, just curiosity, community and continuous learning.*
