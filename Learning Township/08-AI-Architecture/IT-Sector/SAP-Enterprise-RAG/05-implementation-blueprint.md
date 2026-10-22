@@ -24,3 +24,16 @@
 - FAISS: https://github.com/facebookresearch/faiss
 - Ollama: https://ollama.com/
 - Sentence-Transformers: https://www.sbert.net/
+
+
+---
+
+### Curious to see this come alive?
+
+**What if you could build and validate this architecture in a focused learning sprint?**
+
+Explore the ideas freely here, then join a SuccessLabs Academy live learning session to discuss practical applications and hands-on experiments.
+
+**[Explore our live learning sessions](https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3?utm_source=github&utm_medium=learning_resource&utm_campaign=ai_architecture&utm_content=05-implementation-blueprint.md)**
+
+*No pressure, just curiosity, community and continuous learning.*
