@@ -496,3 +496,16 @@ A 20-hour sprint is a **learning prototype plan**, not a production delivery com
 
 ---
 **Publication scope:** architecture and example code only. No connection to a real SAP ECC system, production deployment, or security approval is implied.
+
+
+---
+
+### Curious to see this come alive?
+
+**What would change if you could explain an SAP ECC issue with evidence?**
+
+Explore the ideas freely here, then join a SuccessLabs Academy live learning session to discuss practical applications and hands-on experiments.
+
+**[Explore our live learning sessions](https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3?utm_source=github&utm_medium=learning_resource&utm_campaign=ai_architecture&utm_content=02-sap-ecc-rag.md)**
+
+*No pressure, just curiosity, community and continuous learning.*
