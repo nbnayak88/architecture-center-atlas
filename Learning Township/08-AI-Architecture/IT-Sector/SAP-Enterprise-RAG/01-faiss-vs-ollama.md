@@ -23,3 +23,16 @@ Employee asks why they are ineligible for a bonus. Sentence-Transformers embeds 
 - Variable Pay: proration and weights
 - Learning: curriculum recommendations
 - Payroll: error/runbook interpretation
+
+
+---
+
+### Curious to see this come alive?
+
+**Could you turn this technical concept into a working enterprise experiment?**
+
+Explore the ideas freely here, then join a SuccessLabs Academy live learning session to discuss practical applications and hands-on experiments.
+
+**[Explore our live learning sessions](https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3?utm_source=github&utm_medium=learning_resource&utm_campaign=ai_architecture&utm_content=01-faiss-vs-ollama.md)**
+
+*No pressure, just curiosity, community and continuous learning.*
